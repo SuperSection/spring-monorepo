@@ -1,8 +1,8 @@
-package org.supersection;
+package com.supersection;
 
 public class Dev {
 
-    private Laptop lpt;
+    private Computer comp;
 
     private int age;
 
@@ -11,9 +11,9 @@ public class Dev {
     }
 
     // here comes Constructor Injection
-    public Dev(int age, Laptop laptop) {
+    public Dev(int age, Computer computer) {
         this.age = age;
-        laptop.compile();
+        computer.compile();
         System.out.println("Dev parameterized constructor");
     }
 
@@ -26,13 +26,17 @@ public class Dev {
     }
 
     // here comes Setter Injection
-    public void setLpt(Laptop lpt) {
+/*    public void setLpt(Laptop lpt) {
         this.lpt = lpt;
+    } */
+
+    // provide Setter Injection for this
+    public void setComp(Computer comp) {
+        this.comp = comp;
     }
 
     public void build() {
-        System.out.println();
         System.out.println("Compilation is under process.");
-        lpt.compile();
+        comp.compile();
     }
 }

@@ -4,18 +4,25 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dev" class="org.supersection.Dev">
-        <property name="lpt" ref="laptop" />
-        <constructor-arg name="age" value="15" />
-        <constructor-arg name="laptop" ref="laptop" />
+    <bean id="dev" class="com.supersection.Dev" autowire="byType">
+<!--        <property name="lpt" ref="laptop" />-->
+<!--        <constructor-arg name="age" value="15" />-->
+<!--        <constructor-arg name="laptop" ref="laptop" />-->
+
+<!--        <property name="comp" ref="desktop" />-->
+<!--        <constructor-arg index="0" value="20" />-->
+<!--        <constructor-arg index="1" ref="comp" />-->
     </bean>
 
-<!--    <bean id="dev1" class="org.supersection.Dev">-->
+<!--    <bean id="dev1" class="com.supersection.Dev">-->
 <!--        <property name="age" value="20" />-->
 <!--        <constructor-arg index="0" value="18" />-->
 <!--    </bean>-->
 
-    <bean id="laptop" class="org.supersection.Laptop">
+    <bean id="laptop" class="com.supersection.Laptop" primary="true">
+    </bean>
+
+    <bean id="desktop" class="com.supersection.Desktop">
     </bean>
 
 </beans>

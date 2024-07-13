@@ -1,12 +1,12 @@
-package org.supersection;
+package com.supersection;
 
-public class Laptop {
+public class Laptop implements Computer {
 
     public Laptop() {
         System.out.println("Laptop constructor");
     }
 
     public void compile() {
-        System.out.println("Any task can be done easily!");
+        System.out.println("Compilation done in Laptop!");
     }
 }
